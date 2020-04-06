@@ -7,11 +7,15 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+<<<<<<< HEAD
 import { useStaticQuery, graphql } from "gatsby"
+=======
+>>>>>>> 85da65c... Add typing text to landing page
 
 import "./layout.css"
 
 const Layout = ({ children }) => {
+<<<<<<< HEAD
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,6 +26,8 @@ const Layout = ({ children }) => {
     }
   `)
 
+=======
+>>>>>>> 85da65c... Add typing text to landing page
   return (
     <>
       <div>
