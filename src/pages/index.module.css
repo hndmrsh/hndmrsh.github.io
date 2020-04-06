@@ -1,0 +1,104 @@
+.header {
+  position: relative;
+  /* z-index: 1; */
+  height: 100vh;
+  height: calc(100vh - var(--vh-offset, 0px));
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  font-size: 20px;
+  text-align: center;
+}
+
+.title {
+  font-family: "Inconsolata", monospace;
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 5px;
+  /* compensate letter-spacing, see https://stackoverflow.com/questions/21612058/letter-spacing-wrong-text-center-alignment */
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  padding-left: 0.12em;
+  text-transform: lowercase;
+}
+
+.socialLinks {
+  margin-top: 40px;
+  display: flex;
+}
+
+.wrapper {
+  scroll-snap-align: start;
+}
+
+.fadeTop {
+  animation: fadeTop 0.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fadeTop {
+  0% {
+    /*
+     * Uses translate3d to workaround ie11 bug with vh in translateY
+     * See https://stackoverflow.com/questions/42454352/2d-transform-transition-dosent-work-with-vw-and-vh-units-in-ie11
+     */
+    transform: translate3d(0, -1vh, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.fadeBottom {
+  animation: fadeBottom 0.5s;
+  animation-delay: 0.6s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fadeBottom {
+  0% {
+    transform: translate3d(0, 1vh, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeFooter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Override default footer so always visible on homepage */
+footer {
+  position: fixed;
+  display: block;
+  padding: 50px 20px;
+  background-color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: fadeFooter 1s;
+  animation-delay: 1.2s;
+  animation-fill-mode: backwards;
+}
