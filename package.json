@@ -26,10 +26,7 @@
     "react-typist": "^2.0.5"
   },
   "devDependencies": {
-<<<<<<< HEAD
-=======
     "gh-pages": "^2.2.0",
->>>>>>> 785f215... Add deploy action, change metadata colours
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -39,10 +36,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-<<<<<<< HEAD
-=======
     "deploy": "gatsby build && gh-pages -d public -b master",
->>>>>>> 785f215... Add deploy action, change metadata colours
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
