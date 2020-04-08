@@ -26,22 +26,6 @@ a:focus {
   transform: translate3d(0, -0.1rem, 0);
 }
 
-<<<<<<< HEAD
-footer {
-  display: block;
-  scroll-snap-align: end;
-  margin-top: 100px;
-  padding: 50px 20px;
-  background-color: white;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-p {
-  color: #706563;
-}
-
-=======
 header {
   position: fixed;
   z-index: 1;
@@ -79,7 +63,6 @@ h2 {
   font-weight: inherit;
 }
 
->>>>>>> 7d0ccfd... Add blog page
 h1 {
   color: #3B0D11;
 }

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-.header {
-=======
 .landing {
->>>>>>> 7d0ccfd... Add blog page
   position: relative;
   /* z-index: 1; */
   height: 100vh;
@@ -20,29 +16,13 @@
 .title {
   font-family: "Inconsolata", monospace;
   margin: 0;
-<<<<<<< HEAD
-  font-size: 40px;
-  letter-spacing: 5px;
-=======
   font-size: 2.5rem;
   letter-spacing: 0.1rem;
->>>>>>> 7d0ccfd... Add blog page
   /* compensate letter-spacing, see https://stackoverflow.com/questions/21612058/letter-spacing-wrong-text-center-alignment */
   padding-left: 5px;
   text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-.description {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.12em;
-  padding-left: 0.12em;
-  text-transform: lowercase;
-}
-
-=======
->>>>>>> 7d0ccfd... Add blog page
 .socialLinks {
   margin-top: 40px;
   display: flex;
@@ -89,31 +69,3 @@
     opacity: 1;
   }
 }
-<<<<<<< HEAD
-
-@keyframes fadeFooter {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Override default footer so always visible on homepage */
-footer {
-  position: fixed;
-  display: block;
-  padding: 50px 20px;
-  background-color: white;
-  text-align: center;
-  font-size: 0.8rem;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation: fadeFooter 1s;
-  animation-delay: 1.2s;
-  animation-fill-mode: backwards;
-}
-=======
->>>>>>> 7d0ccfd... Add blog page
