@@ -5,7 +5,7 @@ import styles from "./landing-subtitle.module.css"
 
 const LandingSubtitle = () => {
   return (
-    <p className={styles.subtitle}>
+    <h2 className={styles.subtitle}>
       Android developer&nbsp;
       <Typist
         className={styles.typist}
@@ -30,7 +30,7 @@ const LandingSubtitle = () => {
         <Typist.Backspace count={6} delay={850} />
         Creative
       </Typist>
-    </p>
+    </h2>
   )
 }
 

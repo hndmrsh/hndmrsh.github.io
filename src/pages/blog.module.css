@@ -1,0 +1,41 @@
+.wrapper {
+  position: fixed;
+  z-index: -2;
+  display: block;
+  margin: 50px 20px;
+  text-align: center;
+  font-size: 0.7rem;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.blogWrapper {
+  position: relative;
+  display: block;
+  margin: 200px 20px;
+  margin-left: auto;
+    margin-right: auto;
+  max-width: 700px;
+}
+
+.fadeTop {
+  animation: fadeTop 0.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fadeTop {
+  0% {
+    /*
+     * Uses translate3d to workaround ie11 bug with vh in translateY
+     * See https://stackoverflow.com/questions/42454352/2d-transform-transition-dosent-work-with-vw-and-vh-units-in-ie11
+     */
+    transform: translate3d(0, -1vh, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

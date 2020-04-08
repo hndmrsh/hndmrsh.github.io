@@ -44,10 +44,9 @@ const IndexPage = () => (
     <div style={{ position: "relative" }}>
       <div
         className={styles.wrapper}
-        data-background-color={"white"}
         style={{ height: "100vh" }}
       >
-        <div className={styles.header}>
+        <div className={styles.landing}>
           <div className={styles.fadeTop}>
             <h1 className={styles.title}>Sam Hindmarsh</h1>
 <<<<<<< HEAD
@@ -79,11 +78,6 @@ const IndexPage = () => (
               href="https://www.linkedin.com/in/hndmrsh"
             />
             <SocialLink
-              name="Soundcloud"
-              icon={faSoundcloud}
-              href="https://soundcloud.com/hndmrsh"
-            />
-            <SocialLink
               name="Instagram"
               icon={faInstagram}
               href="https://instagram.com/hndmrsh"
@@ -92,6 +86,11 @@ const IndexPage = () => (
               name="Twitter"
               icon={faTwitter}
               href="https://twitter.com/hndmrsh"
+            />
+            <SocialLink
+              name="Soundcloud"
+              icon={faSoundcloud}
+              href="https://soundcloud.com/hndmrsh"
             />
           </div>
         </div>

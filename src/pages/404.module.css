@@ -1,0 +1,24 @@
+.landing {
+  position: relative;
+  /* z-index: 1; */
+  height: 100vh;
+  height: calc(100vh - var(--vh-offset, 0px));
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  font-size: 20px;
+  text-align: center;
+}
+
+.title {
+  font-family: "Inconsolata", monospace;
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  /* compensate letter-spacing, see https://stackoverflow.com/questions/21612058/letter-spacing-wrong-text-center-alignment */
+  padding-left: 5px;
+  text-transform: uppercase;
+}
