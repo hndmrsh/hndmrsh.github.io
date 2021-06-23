@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
-import MediumFeed from "medium-feed"
-
+import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogPost from "../components/blog-post"
@@ -11,19 +10,35 @@ import styles from "./blog.module.css"
 const BlogPage = () => {
   const [blogEntries, setBlogEntries] = useState(0)
 
-  useEffect(() => {
-    var mediumFeed = new MediumFeed(
-      { useProxy: true }
-    )
+  const data = useStaticQuery(graphql`
+    query MediumFeedQuery {
+     allMediumFeed {
+        nodes {
+           title
+           categories
+           link
+           date(formatString: "MM-DD-YYYY")
+        }
+        totalCount
+     }
+    }
+  `)
 
-    mediumFeed.getUserFeed("hndmrsh", feed => {
-      setBlogEntries(
-        feed.filter(entry => {
-          // Assume entries with no categories are comment replies
-          return entry.categories.length > 0
-        })
-      )
-    })
+  useEffect(() => {
+    // var mediumFeed = new MediumFeed({ useProxy: true })
+    //
+    // mediumFeed.getUserFeed("hndmrsh", feed => {
+    //   setBlogEntries(
+    //     feed.filter(entry => {
+    //       // Assume entries with no categories are comment replies
+    //       return entry.categories.length > 0
+    //     })
+    //   )
+    // })
+
+
+
+    setBlogEntries(data.allMediumFeed)
   }, [])
 
   return (
@@ -31,14 +46,14 @@ const BlogPage = () => {
       <SEO title="Blog" />
       <div className={styles.blogWrapper}>
         <ul style={{ margin: "0", padding: "0" }}>
-          {blogEntries != 0 ? (
-            blogEntries.map((article, index) => {
+          {blogEntries && blogEntries.totalCount != 0 ? (
+            blogEntries.nodes.map((article, index) => {
               return (
                 <BlogPost
                   title={article.title}
                   tags={article.categories}
                   to={article.link}
-                  date={article.pubDate}
+                  date={article.date}
                   index={index}
                   isLast={index < blogEntries.length - 1}
                 />
