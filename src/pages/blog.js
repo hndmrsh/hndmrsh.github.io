@@ -25,19 +25,6 @@ const BlogPage = () => {
   `)
 
   useEffect(() => {
-    // var mediumFeed = new MediumFeed({ useProxy: true })
-    //
-    // mediumFeed.getUserFeed("hndmrsh", feed => {
-    //   setBlogEntries(
-    //     feed.filter(entry => {
-    //       // Assume entries with no categories are comment replies
-    //       return entry.categories.length > 0
-    //     })
-    //   )
-    // })
-
-
-
     setBlogEntries(data.allMediumFeed)
   }, [])
 
